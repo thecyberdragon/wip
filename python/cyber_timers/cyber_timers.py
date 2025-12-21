@@ -1,6 +1,8 @@
 from datetime import datetime
 import matplotlib.pyplot as plt
 
+# Add in option to display the lap time each lap, as well as lap time difference
+
 def stamp():
     return datetime.now()
 
@@ -50,7 +52,7 @@ class CyberTimer():
             self.checkpoints[current_lap][now] = name
         
         if self.verbose == True:
-            print(f"Mark checkpoint: {len(self.checkpoints[current_lap])}, {now}")
+            print(f"Mark checkpoint: {len(self.checkpoints[current_lap])}, {now}, Name: {name}")
         
     def print_timer(self, laps = True, checkpoints = True):
         
